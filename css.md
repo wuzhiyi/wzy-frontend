@@ -1,6 +1,6 @@
 ##CSS 学习笔记
 
-[css 学习进度](http://www.w3school.com.cn/css/css_boxmodel.asp)
+[css 学习进度](http://www.w3school.com.cn/css/css_image_gallery.asp)
 
 ###2016-12-23
 
@@ -150,29 +150,86 @@ CSS 提供 `text-indent`  属性实现文本缩进。
 
 ![img](images/css-00.png)<br />
 
+`padding` 属性定义元素边框与元素内容之间的空白区域，可以按照上右下左的顺序分别设置各边的内边距，各边距可以使用不同的单位或百分比值：
 
+	h1 {
+		padding-top: 10px;
+		padding-right: 0.25em;
+		padding-bottom: 2ex;
+		padding-left: 20%; //父元素的20%
+	}
 
+`border-style` 定义边框样式，也是按照上右下左的顺序。
 
+`border-width` 属性指定边框宽度，可以指定长度，比如 2px 或 0.1em，或者使用关键字, thin, medium, thick。
 
+`border-style` 默认值是 none，如果没有声明样式，就相当于 `border-style:none`。
 
+设置外边距的最简单的方法就是使用 margin 属性，这个属性接受任何长度单位、百分数甚至负值。
 
+外边距合并指的是，当两个垂直外边距相遇时，它们将形成一个外边距。合并后的外边距的高度等于两个发生合并的外边距的高度中的较大者。
 
+div、h1 或 p 元素常被称为块级元素，意味着这些元素显示为一块内容，即 ”块框“。与之相反，span 和 strong 等元素称为 ”行内元素“。
 
+position 属性：
 
+- static：元素框正常生成。块级元素生成一个矩形框，作为文档流的一部分，行内元素则会创建一个或多个行框，置于其父元素中。
+- relative：元素框偏移某个距离。元素仍保持其未定位前的形状，它原本所占的空间仍保留。
+- absolute：元素框从文档流完全删除，并相对于其包含块定位。包含块可能是文档中的另一个元素或者是初始包含块。元素原先在正常文档流中所占的空间会关闭，就好像元素原来不存在一样。元素定位后生成一个块级框，而不论原来它在正常流中生成何种类型的框。
+- fixed：元素框的表现类似于将 position 设置为 absolute，不过其包含块是视窗本身
 
+浮动的框可以向左或向右移动，直到它的外边缘碰到包含框或另一个浮动框的边框为止。由于浮动框不在文档的普通流中，所以文档的普通流中的块框表现得就像浮动框不存在一样。
 
+通配选择器(universal selector)，显示为一个星号 `*`。该选择器可以与任何元素匹配，就像是一个通配符。
 
+一个 class 值可以包含一个词列表，各个词之间用空格分隔。例如：
 
+	<p class="important warning">
+	Balabala
+	</p>
 
+	.important {font-weight: bold;}
+	.warning {font-style: italic;}
+	.important.warning {background: silver;}
 
+通过把两个类选择器链接接在一起，仅可以选择包含这些类名的元素（类名的顺序不限）
 
+id 选择器不能结合使用，因为 id 属性不允许有以空格分隔的词列表。
 
+属性选择器可以根据元素的属性及属性值来选择元素。属性与属性值必须完全匹配。
 
+子串匹配属性选择器：
 
+- `[abc^="def"]`：选择 abc 属性值以 ”def“ 开头的所有元素
+- `[abc$="def"]`：选择 abc 属性值以 ”def“ 结尾的所有元素
+- `[abc*="def"]`：选择 abc 属性值中包含子串 ”def“ 的所有元素
 
+后代选择器(descendant selector) 又称为包含选择器。后代选择器可以选择作为某元素后代的元素。
 
+子元素选择器(child selectors) 只能选择作为某元素子元素的元素。比如：`h1 > strong {color:red;}`
 
+相邻兄弟选择器(adjacent sibling selector) 可选择紧接在另一个元素后的元素，且二者有相同父元素。例如：`h1 + p {margin-top:50px;}`
 
+- `:active`: 向被激活的元素添加样式
+- `:focus`: 向拥有键盘输入焦点的元素添加样式
+- `:hover`: 当鼠标悬浮在元素上方时，向元素添加样式
+- `:link`: 向未被访问的链接添加样式
+- `:visited`: 向已被访问的链接添加样式
+- `:first-child`: 向元素的第一个子元素添加样式
+- `:lang`: 向带有指定 lang 属性的元素添加样式
 
+去掉列表的的圆点：`ul {list-style-type:none;}`
+
+构建水平导航栏的方法之一是将 <li> 元素规定为行内元素：`li {display:inline;}`
+
+###2016-12-28
+
+css 选择器不能缩写，不是并集，必须要写完整，比如：
+
+	header a:linked, a:visited {...}
+
+其中逗号后的 `a:visited` 会是全局样式，如果要只限于 header，选择器必须写全，如下：
+
+	header a:linked, header a:visited {...}
 
 
