@@ -3,6 +3,16 @@
 [HTML 学习进度](http://www.w3school.com.cn/html/html_responsive.asp)<br>
 [HTML5 学习进度](http://www.w3school.com.cn/html5/index.asp)<br>
 
+###2017-1-2
+
+HTML 中新的结构/语义标签，[3wshool传送门](http://www.w3school.com.cn/html/html5_new_elements.asp)：
+
+- header
+- main
+- footer
+- figure, figcaption
+- aside
+
 ###2016-12-23
 
 在 HTML5 中显示视频：
