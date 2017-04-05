@@ -1,6 +1,6 @@
-#Bootstrap 玩转Bootstrap（基础）
+# Bootstrap 玩转Bootstrap（基础）
 22+12+30+12=76
-####最基本的HTML模板
+#### 最基本的HTML模板
 
 bootstrap模板为使IE6、7、8版本（IE9以下版本）浏览器兼容html5新增的标签，引入下面代码文件即可。
 
@@ -10,7 +10,7 @@ bootstrap模板为使IE6、7、8版本（IE9以下版本）浏览器兼容html5�
 
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 
-####排版
+#### 排版
 
 - <small>: 副标题
 - .lead: 添加 "class=lead" 突出显示，其作用是增大文本字号，加粗文本，而且对行高和 margin 也做相应的处理
@@ -33,7 +33,7 @@ bootstrap模板为使IE6、7、8版本（IE9以下版本）浏览器兼容html5�
 - <dl>：定义列表
 - .dl-horizontal：水平定义列表（只有屏幕大于 768px 的时候，添加类名 ".dl-horizontal" 才具有水平定义列表效果
 
-####代码
+#### 代码
 
 - <code>：来显示单行内联代码，一般针对于单个单词或单个句子的代码
 - <pre>：来显示多行块代码，一般是针对于多行代码（成块代码）
@@ -41,7 +41,7 @@ bootstrap模板为使IE6、7、8版本（IE9以下版本）浏览器兼容html5�
 - 不管使用哪种代码风格，在代码中碰到小于号（<）要使用硬编码 `&lt;` 来替代，大于号(>)使用 `&gt;` 来替代
 - .pre-scrollable：控制代码块区域最大高度为340px，一旦超出这个高度，就会在Y轴出现滚动条
 
-####表格
+#### 表格
 
 千万注意，你的<table>元素中一定不能缺少类名“table”<br/>
 表格的类名添加，语法：`class="className0 className1 className2"`
@@ -58,7 +58,7 @@ bootstrap模板为使IE6、7、8版本（IE9以下版本）浏览器兼容html5�
 - .table-condensed：紧凑型表格
 - .table-responsive：响应式表格
 
-####表单
+#### 表单
 
 常见表单元素：
 
@@ -169,7 +169,7 @@ label标签运用了一个类名“sr-only”，标签没显示就是这个样�
 
 - .help-block：表单提示信息
 
-####按钮
+#### 按钮
 
 - .btn：基本按钮
 - .btn-default：默认按钮
@@ -206,7 +206,7 @@ label标签运用了一个类名“sr-only”，标签没显示就是这个样�
     <button class="btnbtn-primary btn-block disabled" type="button">通过添加类名disabled禁用按钮</button>
     <button class="btnbtn-primary btn-smbtn-block" type="button">未禁用的按钮</button>
 
-####图像
+#### 图像
 
 - img-responsive：响应式图片，主要针对于响应式设计
 - img-rounded：圆角图片
@@ -222,7 +222,7 @@ label标签运用了一个类名“sr-only”，标签没显示就是这个样�
     <span class="glyphicon glyphicon-plus"></span>
     <span class="glyphicon glyphicon-cloud"></span>
 
-####网格系统
+#### 网格系统
 
 Bootstrap框架的网格系统工作原理如下：
 
@@ -249,7 +249,7 @@ Bootstrap框架的网格系统工作原理如下：
 - `col-md-push-#`：向右浮动
 - `col-md-pull-#`：向左浮动
 
-####下拉菜单
+#### 下拉菜单
 
 官网示例：
 
@@ -294,11 +294,11 @@ Bootstrap框架的网格系统工作原理如下：
 - .active - 当前状态
 - .disabled - 禁用状态
 
-####按钮组
+#### 按钮组
 
 按钮组使用一个名为“btn-group”的容器，把多个按钮放到这个容器中。
 
-####按钮工具栏
+#### 按钮工具栏
 
 按钮工具栏，只需要将按钮组“btn-group”按组放在一个大的容器“btn-toolbar”中
 
@@ -311,8 +311,8 @@ Bootstrap框架的网格系统工作原理如下：
 
 把“btn-group-justified”模拟成表格（display:table），而且把里面的按钮模拟成表格单元格（display:table-cell）
 
-####按钮下拉菜单
+#### 按钮下拉菜单
 
 向上弹起的下拉菜单（caret 方向朝上显示）：在“.btn-group”类上追加“dropup”类名（这也是做向上弹起下拉菜单要用的类名）
 
-####导航
+#### 导航

@@ -1,6 +1,6 @@
-#jQuery 基础一 样式篇
+# jQuery 基础一 样式篇
 
-###第1章 环境搭建
+### 第1章 环境搭建
 
 <script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.js"></script>
 
@@ -13,7 +13,7 @@
 - 如果传递给 `$(DOM)` 函数的参数是一个 DOM 对象，jQuery 方法会把这个 DOM 对象给包装成一个新的 jQuery 对象
 - id是唯一的，每个id值在一个页面中只能使用一次。如果多个元素分配了相同的id，将只匹配该id选择集合的第一个DOM元素。但这种行为不应该发生;有超过一个元素的页面使用相同的id是无效的
 
-###第2章 选择器
+### 第2章 选择器
 
 语法：
 
@@ -63,7 +63,7 @@
 5. jQuery实现:nth-child(n)是严格来自CSS规范，所以n值是“索引”，也就是说，从1开始计数，:nth-child(index)从1开始的，而eq(index)是从0开始的
 6. nth-child(n) 与 :nth-last-child(n) 的区别前者是从前往后计算，后者从后往前计算
 
-###第3章 属性与样式
+### 第3章 属性与样式
 
 attr()有4个表达式：
 
@@ -72,7 +72,7 @@ attr()有4个表达式：
 - attr(属性名, 函数值)：设置属性的函数值
 - attr(attributes)：给指定元素设置多个属性值，即：{属性名一: “属性值一” , 属性名二: “属性值二” , … … }
 
-####.html()方法
+#### .html()方法
 
 获取集合中第一个匹配元素的HTML内容 或 设置每一个匹配元素的html内容，具体有3种用法：
 
@@ -82,7 +82,7 @@ attr()有4个表达式：
 
 注意：.html()方法内部使用的是DOM的innerHTML属性来处理的，所以在设置与获取上需要注意的一个最重要的问题，这个操作是针对整个HTML内容（不仅仅只是文本内容）
 
-####.text()方法
+#### .text()方法
 
 得到匹配元素集合中每个元素的文本内容结合，包括他们的后代，或设置匹配元素集合中每个元素的文本内容为指定的文本内容。，具体有3种用法：
 
@@ -90,7 +90,7 @@ attr()有4个表达式：
 - .text( textString ) 用于设置匹配元素内容的文本
 - .text( function(index, text) ) 用来返回设置文本内容的一个函数
 
-####.val()方法
+#### .val()方法
 
 - .val()无参数，获取匹配的元素集合中第一个元素的当前值
 - .val( value )，设置匹配的元素集合中每个元素的值
@@ -102,23 +102,23 @@ attr()有4个表达式：
 2. .val()方法多用来设置表单的字段的值
 3. 如果select元素有multiple（多选）属性，并且至少一个选择项被选中， .val()方法返回一个数组，这个数组包含每个选中选择项的值
 
-####.html(),.text()和.val()的差异总结：  
+#### .html(),.text()和.val()的差异总结：  
 
 1. .html(),.text(),.val()三种方法都是用来读取选定元素的内容；只不过.html()是用来读取元素的html内容（包括html标签），.text()用来读取元素的纯文本内容，包括其后代元素，.val()是用来读取表单元素的"value"值。其中.html()和.text()方法不能使用在表单元素上,而.val()只能使用在表单元素上；另外.html()方法使用在多个元素上时，只读取第一个元素；.val()方法和.html()相同，如果其应用在多个元素上时，只能读取第一个表单元素的"value"值，但是.text()和他们不一样，如果.text()应用在多个元素上时，将会读取所有选中元素的文本内容。
 2. .html(htmlString),.text(textString)和.val(value)三种方法都是用来替换选中元素的内容，如果三个方法同时运用在多个元素上时，那么将会替换所有选中元素的内容。
 3. .html(),.text(),.val()都可以使用回调函数的返回值来动态的改变多个元素的内容
 
-####.addClass( className )方法
+#### .addClass( className )方法
 
 - .addClass( className ) : 为每个匹配元素所要增加的一个或多个样式名
 - .addClass( function(index, currentClass) ) : 这个函数返回一个或更多用空格隔开的要增加的样式名
 
-####.removeClass( )方法
+#### .removeClass( )方法
 
 - .removeClass( [className] )：每个匹配元素移除的一个或多个用空格隔开的样式名
 - .removeClass( function(index, class) ) ： 一个函数，返回一个或多个将要被移除的样式名
 
-####.toggleClass( )方法
+#### .toggleClass( )方法
 
 .toggleClass( )方法：在匹配的元素集合中的每个元素上添加或删除一个或多个样式类,取决于这个样式类是否存在或值切换属性。即：如果存在（不存在）就删除（添加）一个类
 
@@ -127,7 +127,7 @@ attr()有4个表达式：
 - .toggleClass( [switch ] )：一个用来判断样式类添加还是移除的 布尔值
 - .toggleClass( function(index, class, switch) [, switch ] )：用来返回在匹配的元素集合中的每个元素上用来切换的样式类名的一个函数。接收元素的索引位置和元素旧的样式类作为参数
 
-####.css()方法
+#### .css()方法
 
 .css() 方法：获取元素样式属性的计算值或者设置元素的CSS属性
 
@@ -142,19 +142,19 @@ attr()有4个表达式：
 - .css( propertyName, function )：可以传入一个回调函数，返回取到对应的值进行处理
 - .css( properties )：可以传一个对象，同时设置多个样式
 
-####.css() 与 .addClass() 设置样式的区别
+#### .css() 与 .addClass() 设置样式的区别
 
 .addClass与.css方法各有利弊，一般是静态的结构，都确定了布局的规则，可以用addClass的方法，增加统一的类规则
 如果是动态的HTML结构，在不确定规则，或者经常变化的情况下，一般多考虑.css()方式
 
-####jQuery提供的存储接口
+#### jQuery提供的存储接口
 
 - jQuery.data( element, key, value )   //静态接口,存数据
 - jQuery.data( element, key )  //静态接口,取数据   
 - .data( key, value ) //实例接口,存数据
 - .data( key ) //实例接口,存数据
 
-####jQuery提供的删除接口
+#### jQuery提供的删除接口
 
 - jQuery.removeData( element [, name ] )
 - .removeData( [name ] )

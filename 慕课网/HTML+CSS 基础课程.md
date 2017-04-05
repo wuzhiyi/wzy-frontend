@@ -1,6 +1,6 @@
-#慕课网 JavaScript入门篇 学习笔记
+# 慕课网 JavaScript入门篇 学习笔记
 
-###第2章 标签
+### 第2章 标签
 
 -  `&nbsp;`: 在 HTML 中输入空格
 - `<table summary="表格简介文本"`

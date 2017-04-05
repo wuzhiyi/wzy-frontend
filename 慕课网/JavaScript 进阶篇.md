@@ -1,16 +1,16 @@
-#慕课网 JavaScript进阶篇 学习笔记
+# 慕课网 JavaScript进阶篇 学习笔记
 
 HTML 引入外部的 JavaScript，语法：
 
     <script type="text/javascript" src="xxx.js"></script>
 
-###第 2 章 变量
+### 第 2 章 变量
 
 声明变量语法：
 
     var 变量名;
 
-###第 3 章 数组
+### 第 3 章 数组
 
 JavaScript 定义数组：
 
@@ -45,7 +45,7 @@ JavaScript 定义数组：
 
     var myarr = [[0,1,2], [0,1,2]];
 
-###第 5 章 函数
+### 第 5 章 函数
 
 定义函数可以使用如下格式：
 
@@ -53,7 +53,7 @@ JavaScript 定义数组：
         函数代码
     }
 
-###第 6 章 事件
+### 第 6 章 事件
 
 事件一般写在标签里
 
@@ -89,7 +89,7 @@ onunload 代码示例：
 
     parseInt(document.getElementById("inputBox").value);
 
-###第 7 章 JavaScript内置对象
+### 第 7 章 JavaScript内置对象
 
 - 访问对象属性的语法：`var objectName = [];`
 - 访问对象的方法：`objectName.methodName()`
@@ -165,7 +165,7 @@ onunload 代码示例：
         document.write(myarr.sort(sortNum));
     </script>
 
-###第 8 章 浏览器对象
+### 第 8 章 浏览器对象
 
 计时器 `setInterval()`，在执行时，从载入页面后每隔指定的时间执行代码，语法：
 
@@ -202,7 +202,7 @@ window.screen 对象包含有关用户屏幕的信息：
 - `screen.height` 返回屏幕分辨率的高
 - `screen.width` 返回屏幕分辨率的宽
 
-###第 9 章 DOM
+### 第 9 章 DOM
 
 文档对象模型 DOM - Document Object Model
 
