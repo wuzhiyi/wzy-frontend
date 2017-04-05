@@ -12,51 +12,51 @@ bootstrap模板为使IE6、7、8版本（IE9以下版本）浏览器兼容html5�
 
 #### 排版
 
-- <small>: 副标题
-- .lead: 添加 "class=lead" 突出显示，其作用是增大文本字号，加粗文本，而且对行高和 margin 也做相应的处理
-- <b><strong>: 让文本直接加粗
-- <em><i>：斜体
-- <strong><em>：强调类名
-    - .text-muted：提示，使用浅灰色（#999）
-    - .text-primary：主要，使用蓝色（#428bca）
-    - .text-success：成功，使用浅绿色(#3c763d)
-    - .text-info：通知信息，使用浅蓝色（#31708f）
-    - .text-warning：警告，使用黄色（#8a6d3b）
-    - .text-danger：危险，使用褐色（#a94442）
+- `<small>`: 副标题
+- `.lead`: 添加 "class=lead“” 突出显示，其作用是增大文本字号，加粗文本，而且对行高和 margin 也做相应的处理
+- `<b><strong>`: 让文本直接加粗
+- `<em><i>`：斜体
+- `<strong><em>`：强调类名
+    - `.text-muted`：提示，使用浅灰色（#999）
+    - `.text-primary`：主要，使用蓝色（#428bca）
+    - `.text-success`：成功，使用浅绿色(#3c763d)
+    - `.text-info`：通知信息，使用浅蓝色（#31708f）
+    - `.text-warning`：警告，使用黄色（#8a6d3b）
+    - `.text-danger`：危险，使用褐色（#a94442）
 - 对齐，四种类名：
-    - .text-left：左对齐
-    - .text-center：居中对齐
-    - .text-right：右对齐
-    - .text-justify：两端对齐
-- .list-unstyled：去点列表
-- .list-inline：内联列表
-- <dl>：定义列表
-- .dl-horizontal：水平定义列表（只有屏幕大于 768px 的时候，添加类名 ".dl-horizontal" 才具有水平定义列表效果
+    - `.text-left`：左对齐
+    - `.text-center`：居中对齐
+    - `.text-right`：右对齐
+    - `.text-justify`：两端对齐
+- `.list-unstyled`：去点列表
+- `.list-inline`：内联列表
+- `<dl>`：定义列表
+- `.dl-horizontal`：水平定义列表（只有屏幕大于 768px 的时候，添加类名 ".dl-horizontal" 才具有水平定义列表效果
 
 #### 代码
 
-- <code>：来显示单行内联代码，一般针对于单个单词或单个句子的代码
-- <pre>：来显示多行块代码，一般是针对于多行代码（成块代码）
-- <kbd>：来显示用户输入代码，一般是表示用户要通过键盘输入的内容
+- `<code>`：来显示单行内联代码，一般针对于单个单词或单个句子的代码
+- `<pre>`：来显示多行块代码，一般是针对于多行代码（成块代码）
+- `<kbd>`：来显示用户输入代码，一般是表示用户要通过键盘输入的内容
 - 不管使用哪种代码风格，在代码中碰到小于号（<）要使用硬编码 `&lt;` 来替代，大于号(>)使用 `&gt;` 来替代
-- .pre-scrollable：控制代码块区域最大高度为340px，一旦超出这个高度，就会在Y轴出现滚动条
+- `.pre-scrollable`：控制代码块区域最大高度为340px，一旦超出这个高度，就会在Y轴出现滚动条
 
 #### 表格
 
-千万注意，你的<table>元素中一定不能缺少类名“table”<br/>
+千万注意，你的`<table>`元素中一定不能缺少类名“table”<br/>
 表格的类名添加，语法：`class="className0 className1 className2"`
 
-- .active：表示当前活动的信息
-- .success：表示成功或者正确的行为
-- .info：表示中立的信息或行为
-- .warning：表示警告，需要特别注意
-- .danger：表示危险或者可能是错误的行为
-- .table-hover：悬浮状态
-- .table：基础表格
-- .table-striped：斑马线表格
-- .table-bordered：带边框表格
-- .table-condensed：紧凑型表格
-- .table-responsive：响应式表格
+- `.active`：表示当前活动的信息
+- `.success`：表示成功或者正确的行为
+- `.info`：表示中立的信息或行为
+- `.warning`：表示警告，需要特别注意
+- `.danger`：表示危险或者可能是错误的行为
+- `.table-hover`：悬浮状态
+- `.table`：基础表格
+- `.table-striped`：斑马线表格
+- `.table-bordered`：带边框表格
+- `.table-condensed`：紧凑型表格
+- `.table-responsive`：响应式表格
 
 #### 表单
 
@@ -69,14 +69,14 @@ bootstrap模板为使IE6、7、8版本（IE9以下版本）浏览器兼容html5�
 - 文本域
 - 按钮
 
-- .form-control：定制效果
+- `.form-control`：定制效果
     - 宽度变成了100%
     - 设置了一个浅灰色（#ccc）的边框
     - 具有4px的圆角
     - 设置阴影效果，并且元素得到焦点之时，阴影和边框效果会有所变化
     - 设置了placeholder的颜色为#999
-- .form-horizontal：水平表单
-- .form-inline：内联表单
+- `.form-horizontal`：水平表单
+- `.form-inline`：内联表单
 
 如果你要在input前面添加一个label标签时，会导致input换行显示。如果你必须添加这样的一个label标签，并且不想让input换行，你需要将label标签也放在容器“form-group”中，如：
 
@@ -119,17 +119,14 @@ label标签运用了一个类名“sr-only”，标签没显示就是这个样�
 - 不管是checkbox还是radio都使用label包起来了
 - checkbox连同label标签放置在一个名为“.checkbox”的容器内
 - radio连同label标签放置在一个名为“.radio”的容器内
-
 - 如果checkbox需要水平排列，只需要在label标签上添加类名“checkbox-inline”
 - 如果radio需要水平排列，只需要在label标签上添加类名“radio-inline”
-
-- input[type=“submit”]
-- input[type=“button”]
-- input[type=“reset”]
-- <button>
-
-- input-sm:让控件比正常大小更小
-- input-lg:让控件比正常大小更大
+- `input[type=“submit”]`
+- `input[type=“button”]`
+- `input[type=“reset”]`
+- `<button>`
+- `input-sm`:让控件比正常大小更小
+- `input-lg`:让控件比正常大小更大
 
 焦点状态是通过伪类“:focus”来实现
 
@@ -142,9 +139,9 @@ label标签运用了一个类名“sr-only”，标签没显示就是这个样�
 
 表单验证状态样式：
 
-- .has-warning:警告状态（黄色）
-- .has-error：错误状态（红色）
-- .has-success：成功状态（绿色）
+- `.has-warning`:警告状态（黄色）
+- `.has-error`：错误状态（红色）
+- `.has-success`：成功状态（绿色）
 - 使用的时候只需要在form-group容器上对应添加状态类名
 
 如果你想让表单在对应的状态下显示 icon 出来，只需要在对应的状态下添加类名“has-feedback”。请注意，此类名要与“has-error”、“has-warning”和“has-success”在一起：
@@ -167,19 +164,19 @@ label标签运用了一个类名“sr-only”，标签没显示就是这个样�
 
     <span class="glyphiconglyphicon-warning-sign form-control-feedback"></span>
 
-- .help-block：表单提示信息
+- `.help-block`：表单提示信息
 
 #### 按钮
 
-- .btn：基本按钮
-- .btn-default：默认按钮
-- .btn-block：块状按钮(width:100%)
+- `.btn`：基本按钮
+- `.btn-default`：默认按钮
+- `.btn-block`：块状按钮(width:100%)
 - 活动状态：
-    - :hover：悬浮状态
-    - :active：点击状态
-    - :focus：焦点状态
+    - `:hover`：悬浮状态
+    - `:active`：点击状态
+    - `:focus`：焦点状态
 
-制作按钮除了使用<button>标签元素之外，还可以使用<input type="submit">和<a>标签<br/>
+制作按钮除了使用`<button>`标签元素之外，还可以使用`<input type="submit">`和`<a>`标签<br/>
 虽然在Bootstrap框架中使用任何标签元素都可以实现按钮风格，但个人并不建议这样使用，为了避免浏览器兼容性问题，个人强烈建议使用button或a标签来制作按钮。
 
     <button class="btn" type="button">基础按钮.btn</button>
@@ -198,7 +195,7 @@ label标签运用了一个类名“sr-only”，标签没显示就是这个样�
 
 两者的主要区别是：
 
-“.disabled”样式不会禁止按钮的默认行为，比如说提交和重置行为等。如果想要让这样的禁用按钮也能禁止按钮的默认行为，则需要通过JavaScript这样的语言来处理。对于<a>标签也存在类似问题，如果通过类名“.disable”来禁用按钮，其链接行为是无法禁止。而在元素标签中添加“disabled”属性的方法是可以禁止元素的默认行为的。
+“.disabled”样式不会禁止按钮的默认行为，比如说提交和重置行为等。如果想要让这样的禁用按钮也能禁止按钮的默认行为，则需要通过JavaScript这样的语言来处理。对于`<a>`标签也存在类似问题，如果通过类名“.disable”来禁用按钮，其链接行为是无法禁止。而在元素标签中添加“disabled”属性的方法是可以禁止元素的默认行为的。
 
 下面是两种方法的举例：
 
@@ -208,10 +205,10 @@ label标签运用了一个类名“sr-only”，标签没显示就是这个样�
 
 #### 图像
 
-- img-responsive：响应式图片，主要针对于响应式设计
-- img-rounded：圆角图片
-- img-circle：圆形图片
-- img-thumbnail：缩略图片
+- `img-responsive`：响应式图片，主要针对于响应式设计
+- `img-rounded`：圆角图片
+- `img-circle`：圆形图片
+- `img-thumbnail`：缩略图片
 
 对icon设置一个默认样式，在Bootstrap框架中是通过给元素添加“glyphicon”类名来实现，然后通过伪元素“:before”的“content”属性调取对应的icon编码
 
@@ -274,7 +271,7 @@ Bootstrap框架的网格系统工作原理如下：
 
     <div class="dropdown"></div>
 
-2. 使用了一个<button>按钮做为父菜单，并且定义类名“dropdown-toggle”和自定义“data-toggle”属性，且值必须和最外容器类名一致，此示例为:
+2. 使用了一个`<button>`按钮做为父菜单，并且定义类名“dropdown-toggle”和自定义“data-toggle”属性，且值必须和最外容器类名一致，此示例为:
 
     data-toggle="dropdown"
 
@@ -282,17 +279,17 @@ Bootstrap框架的网格系统工作原理如下：
 
     <ul class="dropdown-menu">
 
-- .divider：下拉分隔线
-- .dropdown-header：下拉内容头部标题
+- `.divider`：下拉分隔线
+- `.dropdown-header`：下拉内容头部标题
 
 下拉菜单相对于父容器右对齐，可以在 `dropdown-menu` 上添加一个 `pull-right` 或者 `dropdown-menu-right` 类名
 
 菜单栏状态：
 
-- :hover - 悬浮状态
-- :focus - 焦点状态
-- .active - 当前状态
-- .disabled - 禁用状态
+- `:hover` - 悬浮状态
+- `:focus` - 焦点状态
+- `.active` - 当前状态
+- `.disabled` - 禁用状态
 
 #### 按钮组
 
@@ -304,7 +301,7 @@ Bootstrap框架的网格系统工作原理如下：
 
 嵌套分组，只需要把当初制作下拉菜单的 `dropdown` 的容器换成 `btn-group`，并且和普通的按钮放在同一级
 
-- .btn-group-vertical：按钮组垂直显示
+- `.btn-group-vertical`：按钮组垂直显示
 
 等分按钮在移动端上特别实用，整个按钮组宽度是容器的 100%，按钮组里的每个按钮平分整个容器宽度。<br/>
 等分按钮也被称为自适应分组按钮，实现方法，只需要在按钮组“btn-group”上追加一个“btn-group-justified”类名
