@@ -313,3 +313,71 @@ Bootstrap框架的网格系统工作原理如下：
 向上弹起的下拉菜单（caret 方向朝上显示）：在“.btn-group”类上追加“dropup”类名（这也是做向上弹起下拉菜单要用的类名）
 
 #### 导航
+
+标签形导航栏是通过 `nav-tab` 样式来实现。在制作标签形导航时需要在原导航“nav”上追加此类名
+
+假设我们想让“Home”项为当前选中项，只需要在其标签上添加类名“class="active"”即可：
+
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="##">Home</a></li>
+        …
+    </ul>
+
+- 选项卡还带有禁用状态，实现这样的效果，只需要在标签项上添加“class="disabled"
+- 胶囊形导航通过类名 `nav-pills` 实现
+- 垂直堆叠导航通过类名 `nav-stacked` 实现
+- 导航栏分隔线 `class=nav-divider`
+- 自适应导航使用类名 `nav-justified`
+
+#### 导航加下拉菜单（二级导航）
+
+在Bootstrap框架中制作二级导航，只需要将li当作父容器，使用类名“dropdown”，同时在li中嵌套另一个列表ul
+
+#### 面包屑式导航
+
+面包屑(Breadcrumb)一般用于导航，主要起的作用是告诉用户现在所处页面的位置(当前位置)，使用方法就是在 `<ol>` 或 `<ul>` 标签中加入类 `class="breadcrumb"`
+
+#### 导航条
+
+导航条(navbar) 和导航(nav) 区别：
+
+- navbar 中有一个背景色
+- navbar 可以是纯链接（类似nav），也可以是表单，还可以是表单和导航一起结合等多种形式
+
+导航条使用方法：
+
+- 第一步：首先在制作导航的列表(`<ul class=”nav”>`)基础上添加类名“navbar-nav”
+- 第二步：在列表外部添加一个容器（div），并且使用类名“navbar”和“navbar-default”
+- 通过“navbar-header”和“navbar-brand”在菜单前面添加标题
+- 通过“nav-form”在导航条内添加表单，`navbar-left` 和 `navbar-right` 实现表单左浮动和右浮动
+
+示例：
+
+    <div class="navbar navbar-default" role="navigation">
+         <ul class="nav navbar-nav">
+    	 	<li class="active"><a href="##">首页</a></li>
+            <li><a href="##">AAAAA</a></li>
+            <li><a href="##">BBBBB</a></li>
+            <li><a href="##">CCCCC</a></li>
+            <li><a href="##">DDDDD</a></li>
+    	 </ul>
+
+导航条中还可以使用按钮、文本和链接：
+
+- 导航条中的按钮navbar-btn
+- 导航条中的文本navbar-text
+- 导航条中的普通链接navbar-link
+
+Bootstrap 框架提供了两种固定导航条的方式：
+
+- .navbar-fixed-top：导航条固定在浏览器窗口顶部
+- .navbar-fixed-bottom：导航条固定在浏览器窗口底部
+
+固定导航条会遮住 body 内容，只需要修改 css：
+
+    body {
+    padding-top: 70px;/*有顶部固定导航条时设置*/
+    padding-bottom: 70px;/*有底部固定导航条时设置*/
+    }
+
+还有一种办法，把导航条放在页面内容前面
