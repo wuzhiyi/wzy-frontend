@@ -381,3 +381,218 @@ Bootstrap 框架提供了两种固定导航条的方式：
     }
 
 还有一种办法，把导航条放在页面内容前面
+
+响应式导航条示例：
+
+    <div class="navbar navbar-default" role="navigation">
+      <div class="navbar-header">
+         　<!-- .navbar-toggle样式用于toggle收缩的内容，即nav-collapse collapse样式所在元素 -->
+           <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+             <span class="sr-only">Toggle Navigation</span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+           </button>
+           <!-- 确保无论是宽屏还是窄屏，navbar-brand都显示 -->
+           <a href="##" class="navbar-brand">慕课网</a>
+      </div>
+      <!-- 屏幕宽度小于768px时，div.navbar-responsive-collapse容器里的内容都会隐藏，显示icon-bar图标，当点击icon-bar图标时，再展开。屏幕大于768px时，默认显示。 -->
+      <div class="collapse navbar-collapse navbar-responsive-collapse">
+        	<ul class="nav navbar-nav">
+          		<li class="active"><a href="##">网站首页</a></li>
+          		<li><a href="##">系列教程</a></li>
+          		<li><a href="##">名师介绍</a></li>
+          		<li><a href="##">成功案例</a></li>
+          		<li><a href="##">关于我们</a></li>
+    	 	</ul>
+      </div>
+    </div>
+
+- 反色导航条将 `navbar-default` 换成 `navbar-inverse`
+
+#### 分页导航
+
+在Bootstrap框架中使用的是 `ul>li>a` 结构实现分页导航，在ul标签上加入pagination方法：
+
+    <ul class="pagination">
+       <li><a href="#">&laquo;</a></li>
+       <li><a href="#">1</a></li>
+       <li><a href="#">2</a></li>
+       <li><a href="#">3</a></li>
+       <li><a href="#">4</a></li>
+       <li><a href="#">5</a></li>
+       <li><a href="#">&raquo;</a></li>
+    </ul>
+
+#### 翻页分页导航
+
+    <ul class="pager">
+       <li><a href="#">&laquo;上一页</a></li>
+       <li><a href="#">下一页&raquo;</a></li>
+    </ul>
+
+- previous：让“上一步”按钮居左
+- next：让“下一步”按钮居右
+- label：标签
+- badge：徽章
+
+#### 缩略图
+
+结构：
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6 col-md-3">
+                <a href="#" class="thumbnail">
+                    <img src="http://img.mukewang.com/5434eba100014fe906000338.png" style="height: 180px; width: 100%; display: block;" alt="">
+                </a>
+            </div>
+        …
+        </div>
+    </div>
+
+添加一个 `<div class="caption">` 容器，在这个容器中放置其他内容，比如说标题，文本描述，按钮等
+
+#### 可关闭的警示框
+
+只需要在默认的警示框里面添加一个关闭按钮。然后进行三个步骤：
+
+1. 需要在基本警示框“alert”的基础上添加“alert-dismissable”样式。
+2. 在button标签中加入"class="close"类，实现警示框关闭按钮的样式。
+3. 要确保关闭按钮元素上设置了自定义属性：“data-dismiss="alert"”（因为可关闭警示框需要借助于Javascript来检测该属性，从而控制警示框的关闭）。
+
+- `alert-link`：警示框链接
+
+#### 进度条
+
+使用方法：
+
+    <div class="progress">
+           <div class="progress-bar" style="width:40%"></div>
+    </div>
+    //结构优化（语义化更友好）
+    <div class="progress">
+        <div class="progress-bar" style="width:40%;" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+            <span class="sr-only">40% Complete</span>
+        </div>
+    </div>
+
+#### 媒体对象
+
+- 媒体对像的容器：常使用“media”类名表示，用来容纳媒体对象的所有内容
+- 媒体对像的对象：常使用“media-object”表示，就是媒体对象中的对象，常常是图片
+- 媒体对象的主体：常使用“media-body”表示，就是媒体对像中的主体内容，可以是任何元素，常常是图片侧边内容
+- 媒体对象的标题：常使用“media-heading”表示，就是用来描述对象的一个标题，此部分可选
+- 使用“pull-left”或者“pull-right”来控制媒体对象中对象的浮动方式
+
+#### 媒体对象列表
+
+Bootstrap框架提供了一个列表展示的效果，在写结构的时候可以使用ul，并且在ul上添加类名“media-list”，而在li上使用“media”，示例代码如下：
+
+    <ul class="media-list">
+        <li class="media">
+            <a class="pull-left" href="#">
+                <img class="media-object" src=" " alt="...">
+            </a>
+            <div class="media-body">
+                <h4 class="media-heading">Media Header</h4>
+                <div>…</div>
+            </div>
+        </li>
+        <li class="media">…</li>
+        <li class="media">…</li>
+    </ul>
+
+- 列表组里徽章 `<span class="badge">123</span>` 设置为右浮动
+
+#### 带链接的列表组
+
+使用 `div.list-group` 作为容器，内容为 `a.list-group-item`
+
+    <div class="list-group">
+        <a href="##" class="list-group-item">图解CSS3</a>
+        <a href="##" class="list-group-item"><span class="badge">220</span>Sass教程</a>
+        <a href="##" class="list-group-item">玩转Bootstrap</a>
+    </div>
+
+- list-group-item-heading：定义列表项头部样式
+- list-group-item-text：定义列表项主要内容
+
+#### Bootstrap 支持的 JavaScript 插件
+
+    <!—导入jQuery版本库，因为Bootstrap的JavaScript插件依赖于jQuery -->
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+    <!—- 一次性导入所有Bootstrap的JavaScript插件（压缩版本） -->
+    <script src="js/bootstrap.min.js"></script>
+
+Bootstrap V3.2 提供了 12 种 JavaScript 插件：
+
+- 动画过渡（Transitions）:对应的插件文件“transition.js”
+- 模态弹窗（Modal）:对应的插件文件“modal.js”
+- 下拉菜单（Dropdown）：对应的插件文件“dropdown.js”
+- 滚动侦测（Scrollspy）：对应的插件文件“scrollspy.js”
+- 选项卡（Tab）：对应的插件文件“tab.js”
+- 提示框（Tooltips）：对应的插件文件“tooltop.js”
+- 弹出框（Popover）：对应的插件文件“popover.js”
+- 警告框（Alert）：对应的插件文件“alert.js”
+- 按钮（Buttons）：对应的插件文件“button.js”
+- 折叠/手风琴（Collapse）：对应的插件文件“collapse.js”
+- 图片轮播Carousel：对应的插件文件“carousel.js”
+- 自动定位浮标Affix：对应的插件文件“affix.js”
+
+所有类名中头部都是 header，只有 `media-heding` 是heading
+
+#### 声明式触发方法
+
+方法一：模态弹出窗声明，只需要自定义两个必要的属性：data-toggle和data-target（bootstrap中声明式触发方法一般依赖于这些自定义的data-xxx 属性。比如data-toggle="" 或者 data-dismiss=""）。例如：
+
+    <!-- 触发模态弹出窗的元素 -->
+    <button type="button" data-toggle="modal" data-target="#mymodal" class="btn btn-primary">点击我会弹出模态弹出窗</button>
+    <!-- 模态弹出窗 -->
+    <div class="modal fade" id="mymodal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <!-- 模态弹出窗内容 -->
+            </div>
+        </div>
+    </div>
+
+注意以下事项：
+
+1. data-toggle必须设置为modal(toggle中文翻译过来就是触发器)；
+2. data-target可以设置为CSS的选择符，也可以设置为模态弹出窗的ID值，一般情况设置为模态弹出窗的ID值，因为ID值是唯一的值。
+
+方法二：触发模态弹出窗也可以是一个链接<a>元素，那么可以使用链接元素自带的href属性替代data-target属性，如：
+
+    <!-- 触发模态弹出窗的元素 -->
+    <a data-toggle="modal" href="#mymodal" class=" btn btn-primary" >点击我会弹出模态弹出窗</a>
+    <!-- 模态弹出窗 -->
+    <div class="modal fade"  id="mymodal" >
+        <div class="modal-dialog" >
+            <div class="modal-content" >
+            <!-- 模态弹出窗内容 -->
+            </div>
+        </div>
+    </div>
+
+不过建议还是使用统一使用data-target的方式来触发。
+
+在类名添加 `class="fade"`，可以添加淡出效果
+
+也可以通过 JavaScript 方法触发模态弹出窗，比如给一个按钮一个单击事件，触发模态弹出窗，jQuery 示例代码：
+
+    $(function(){
+      $(".btn").click(function(){
+        $("#mymodal").modal();
+      });
+    });
+
+使用 JavaScript 触发模态弹出窗时，Bootstrap 支持自定义属性，主要包括属性设置、参数设置和事件设置，例如：
+
+    $(function(){
+        $(".btn").click(function(){
+            $("#mymodal").modal({
+                keyboard:false
+            });
+        });
+    });
