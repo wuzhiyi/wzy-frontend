@@ -105,3 +105,123 @@ CSS3 Gradient 分为线性渐变(linear) 和径向渐变(radial)
 - `:read-only`：伪类选择器用来指定处于只读状态元素的样式。简单点理解就是，元素中设置了“readonly=’readonly’”
 - `:read-write`：指定当元素处于非只读状态时的样式
 - `::before`和`::after`这两个主要用来给元素的前面或后面插入内容，这两个常和"content"配合使用，使用的场景最多的就是清除浮动
+
+#### 变形与动画
+
+- `-ms-transform`：-ms代表ie内核识别码
+- `-moz-transform`：-moz代表火狐内核识别码
+- `-webkit-transform`：-webkit代表谷歌内核识别码
+- `rotate()`：旋转
+- `skew()`：扭曲
+- `scale()`：缩放
+- `translate()`：位移
+    -  translate的百分比是根据自身的宽度和高度来定的，`translate(-50%,-50%)` 配合 `top：50%，left：50%` 实现了居中
+    - 当元素原来已经有position:absolute的时候，这时候你想相对于本身移动，可以使用translate
+    - 做动画的时候translate更适合，不会引起页面的重排和重绘
+    - 关于transform类的，可以使用GPU加速，提高浏览器的性能
+- `matrix()`：是一个含六个值的(a,b,c,d,e,f)变换矩阵，用来指定一个2D变换，相当于直接应用一个[a b c d e f]变换矩阵。就是基于水平方向（X轴）和垂直方向（Y轴）重新定位元素
+- `transform-origin`：中心点
+- `transition-property`：就是通过鼠标的单击、获得焦点，被点击或对元素任何改变中触发，并平滑地以动画效果改变CSS的属性值
+
+
+在CSS中创建简单的过渡效果可以从以下几个步骤来实现：
+
+1. 在默认样式中声明元素的初始状态样式
+2. 声明过渡元素最终状态样式，比如悬浮状态
+3. 在默认样式中通过添加过渡函数，添加一些不同的样式
+
+CSS3的过度transition属性是一个复合属性，主要包括以下几个子属性：
+
+- `transition-property`:指定过渡或动态模拟的CSS属性
+- `transition-duration`:指定完成过渡所需的时间
+- `transition-timing-function`:指定过渡函数
+- `transition-delay`:指定开始出现的延迟时间
+
+特别注意：当“transition-property”属性设置为all时，表示的是所有中点值的属性
+
+- `@keyframe animationName{...}`：关键帧
+- `animation-name`属性主要是用来调用 `@keyframes` 定义好的动画
+    - 调用动画语法：`animation-name: none | IDENT[,none|DENT]*;`
+- `animation-duration`主要用来设置CSS3动画播放时间
+    - 动画播放时间语法：`animation-duration: <time>[,<time>]*`
+- `animation-timing-function`属性主要用来设置动画播放方式
+- `animation-delay`属性用来定义动画开始播放的时间，用来触发动画播放的时间点
+    - 语法规则：`animation-delay:<time>[,<time>]*`
+- `animation-iteration-count`属性主要用来定义动画的播放次数
+    - 语法规则：`animation-iteration-count: infinite | <number> [, infinite | <number>]*`
+- `animation-direction`属性主要用来设置动画播放方向
+    - 语法规则：`animation-direction:normal | alternate [, normal | alternate]*`
+    - 主要有两个值：normal、alternate
+        - normal是默认值，如果设置为normal时，动画的每次循环都是向前播放；
+        - 另一个值是alternate，他的作用是，动画播放在第偶数次向前播放，第奇数次向反方向播放。
+- `animation-play-state`属性主要用来控制元素动画的播放状态
+    - 其主要有两个值：running(默认值)和paused
+- `animation-fill-mode`属性定义在动画开始之前和结束之后发生的操作
+    - 主要具有四个属性值：none、forwards、backwords和both
+
+#### 布局样式
+
+- 多列布局语法：`columns：<column-width>||<column-count>`
+- 列宽：`column-width: auto|<length>`
+- 列数：`column-count：auto|<integer>`
+- 列间距：`column-gap: normal||<length>`
+- 列表边框：`column-rule:<column-rule-width>|<column-rule-style>|<column-rule-color>`
+- 跨列设置：`column-span: none | all`
+
+#### 盒子模型
+
+- W3C标准盒模型
+    - 外盒尺寸计算（元素空间尺寸）
+        - element空间高度＝内容高度＋内距＋边框＋外距
+        - element空间宽度＝内容宽度＋内距＋边框＋外距
+    - 内盒尺寸计算（元素大小）
+        - element高度＝内容高度＋内距＋边框（height为内容高度）
+        - element宽度＝内容宽度＋内距＋边框（width为内容宽度）
+- box-sizing属性，能够事先定义盒模型的尺寸解析方式
+    - 其语法规则如下：`box-sizing: content-box | border-box | inherit`
+    - 属性：content-box, border-box, inherit
+
+#### Media Queries
+
+- 媒体类型：
+    - All：所有设备
+    - Braille：盲人用点字法触觉回馈设备
+    - Embossed：盲文打印机
+    - Handheld：便携设备
+    - Print：打印用纸或打印预览视图
+    - Projection：各种投影设备
+    - Screen：电脑显示器
+    - Speech：语音或音频合成器
+    - Tv：电视机类型设备
+    - Tty：使用固定密度字母栅格的媒介，比如电传打字机和终端
+- 媒体类型常用的引用方法：
+    - link标签
+    - `@import`
+    - `@media`
+- Media Queries 使用方法：`@media 媒体类型 and (媒体特性){你的样式}`
+- Media Queries 常用特性：
+    - max-width：最大宽度
+    - min-width：最小宽度
+    - and：多个特性使用
+    - device width：设备屏幕的输出宽度
+    - not：取反操作
+    - only：指定
+- Media Queries在其他浏览器中不要像其他CSS3属性一样在不同的浏览器中添加前缀
+
+#### Responsive
+
+- 弹性图片：`img {max-width:100%;}`
+- Responsive 布局技巧：
+    - 尽量少用无关紧要的div
+    - 不要使用内联元素（inline）
+    - 尽量少用JS或flash
+    - 丢弃没用的绝对定位和浮动样式
+    - 摒弃任何冗余结构和不使用100%设置
+- meta 标签被称为可视区域 meta 标签，使用方法为：`meta name="viewport" content="" />`
+
+#### 用户界面与其他重要属性
+
+- resize属性主要是用来改变元素尺寸大小的，其主要目的是增强用户体验，语法：`resize: none | both | horizontal | vertical | inherit`
+- outline 外轮廓属性，外轮廓线不占用网页布局空间，不一定是矩形，外轮廓是属于一种动态样式，只有元素获取到焦点或者被激活时呈现
+    - outline属性的基本语法：`outline: ［outline-color］ || [outline-style] || [outline-width] || [outline-offset] || inherit`
+    - 
