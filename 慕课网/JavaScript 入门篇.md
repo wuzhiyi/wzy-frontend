@@ -1,4 +1,4 @@
-#慕课网 JavaScript入门篇 学习笔记
+# 慕课网 JavaScript入门篇 学习笔记
 
 ### 1-9 JavaScript 什么是函数
 
